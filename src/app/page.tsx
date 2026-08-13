@@ -151,14 +151,15 @@ export default function Home() {
               <span className="text-blue-400">Nandita.</span>
             </h1>
 
+            {/* MUST-FIX #1 */}
             <h2 className="mt-5 text-2xl font-semibold text-slate-300 sm:text-3xl">
-              I build practical technology.
+              ECE Student | Embedded Systems & IoT Developer
             </h2>
 
             <p className="mt-6 max-w-xl text-lg leading-8 text-slate-400">
-              I&apos;m an ECE student interested in Embedded Systems, IoT,
-              VLSI, and software development. I enjoy turning ideas into
-              practical and useful technology solutions.
+              I build practical projects in Embedded Systems and IoT, combining
+              electronics, programming, and software development to create
+              useful technology solutions.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-4">
@@ -309,6 +310,12 @@ export default function Home() {
           <h2 className="mt-3 text-4xl font-bold">
             Things I&apos;ve built
           </h2>
+
+          {/* MUST-FIX #2 */}
+          <p className="mt-4 max-w-3xl text-lg leading-8 text-slate-400">
+            My projects combine software development with my ECE background,
+            helping me build practical solutions across hardware and software.
+          </p>
 
           <div className="mt-10 grid gap-6 md:grid-cols-3">
             {projects.map((project) => (

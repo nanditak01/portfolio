@@ -1,29 +1,48 @@
-export default function About() {
+export default function AboutPage() {
   return (
-    <main className="min-h-screen bg-white p-10">
-      <h1 className="text-4xl font-bold text-blue-600 mb-6">
-        About Me
-      </h1>
+    <main className="min-h-screen bg-white">
+      <section className="mx-auto max-w-6xl px-6 py-20">
+        <p className="text-sm font-semibold uppercase tracking-widest text-blue-600">
+          About Me
+        </p>
 
-      <p className="text-lg mb-4">
-        Hello! I'm Nandita K, an Electronics and Communication Engineering student.
-      </p>
+        <h1 className="mt-3 text-4xl font-bold text-gray-900">
+          About Nandita Kundanagar
+        </h1>
 
-      <p className="text-lg mb-4">
-        I enjoy building web applications, AI projects, and embedded systems. I am
-        passionate about learning new technologies and solving real-world problems.
-      </p>
+        <p className="mt-6 max-w-3xl text-lg leading-8 text-gray-600">
+          I am an Electronics & Communication Engineering student interested
+          in building practical technology solutions across embedded systems,
+          artificial intelligence, and modern web development.
+        </p>
 
-      <h2 className="text-2xl font-semibold mt-8 mb-3">Skills</h2>
+        <div className="mt-10 grid gap-6 md:grid-cols-2">
+          <div className="rounded-xl border p-6">
+            <h2 className="text-xl font-semibold text-gray-900">
+              Technical Interests
+            </h2>
 
-      <ul className="list-disc pl-6 space-y-2">
-        <li>React</li>
-        <li>Next.js</li>
-        <li>Tailwind CSS</li>
-        <li>Python</li>
-        <li>Machine Learning</li>
-        <li>Embedded Systems</li>
-      </ul>
+            <ul className="mt-4 space-y-3 text-gray-600">
+              <li>Embedded Systems</li>
+              <li>VLSI</li>
+              <li>Python</li>
+              <li>Artificial Intelligence</li>
+              <li>Web Development</li>
+            </ul>
+          </div>
+
+          <div className="rounded-xl border p-6">
+            <h2 className="text-xl font-semibold text-gray-900">
+              Learning Approach
+            </h2>
+
+            <p className="mt-4 leading-7 text-gray-600">
+              I enjoy learning by building projects and exploring practical
+              solutions to real-world problems.
+            </p>
+          </div>
+        </div>
+      </section>
     </main>
   );
 }

@@ -1,79 +1,82 @@
-export default function CaseStudies() {
+export default function CaseStudiesPage() {
   return (
-    <main className="min-h-screen bg-gray-100 px-8 py-12">
-      <h1 className="text-4xl font-bold text-blue-600 mb-8">
-        Case Studies
-      </h1>
+    <main className="min-h-screen bg-gray-50">
+      <section className="mx-auto max-w-6xl px-6 py-20">
+        <p className="text-sm font-semibold uppercase tracking-widest text-blue-600">
+          Case Studies
+        </p>
 
-      <div className="space-y-8">
+        <h1 className="mt-3 text-4xl font-bold text-gray-900">
+          Selected Work
+        </h1>
 
-        <div className="bg-white rounded-lg shadow-lg p-6">
-          <h2 className="text-2xl font-semibold mb-4">
-            Student Dashboard
-          </h2>
+        <p className="mt-5 max-w-2xl text-lg leading-8 text-gray-600">
+          A closer look at how I approach projects, from identifying a
+          problem to building and improving a practical solution.
+        </p>
 
-          <p className="mb-2">
-            <strong>Project Goal:</strong> Build a simple and responsive dashboard for students to view courses, assignments, and learning progress.
-          </p>
+        <div className="mt-10 space-y-6">
+          <article className="rounded-xl border bg-white p-6 shadow-sm">
+            <p className="text-sm font-semibold text-blue-600">
+              CASE STUDY 01
+            </p>
 
-          <p className="mb-2">
-            <strong>My Role:</strong> Designed and developed the user interface using React and Tailwind CSS.
-          </p>
+            <h2 className="mt-2 text-2xl font-bold text-gray-900">
+              Real-Time Colour Detection System
+            </h2>
 
-          <p className="mb-2">
-            <strong>What I Learned:</strong> Creating reusable components, responsive layouts, and improving user experience.
-          </p>
+            <p className="mt-4 leading-7 text-gray-600">
+              The project explores real-time colour detection using an ESP32
+              module and camera, combining hardware and software to create a
+              practical computer-vision application.
+            </p>
 
-          <p>
-            <strong>Technologies:</strong> React, Tailwind CSS
-          </p>
+            <div className="mt-5 flex flex-wrap gap-2">
+              <span className="rounded-full bg-blue-50 px-3 py-1 text-sm text-blue-700">
+                ESP32
+              </span>
+
+              <span className="rounded-full bg-blue-50 px-3 py-1 text-sm text-blue-700">
+                Camera
+              </span>
+
+              <span className="rounded-full bg-blue-50 px-3 py-1 text-sm text-blue-700">
+                IoT
+              </span>
+            </div>
+          </article>
+
+          <article className="rounded-xl border bg-white p-6 shadow-sm">
+            <p className="text-sm font-semibold text-blue-600">
+              CASE STUDY 02
+            </p>
+
+            <h2 className="mt-2 text-2xl font-bold text-gray-900">
+              Student Learning Dashboard
+            </h2>
+
+            <p className="mt-4 leading-7 text-gray-600">
+              A responsive web dashboard designed to organize courses,
+              assignments, learning progress, and academic activities in one
+              interface.
+            </p>
+
+            <div className="mt-5 flex flex-wrap gap-2">
+              <span className="rounded-full bg-blue-50 px-3 py-1 text-sm text-blue-700">
+                Next.js
+              </span>
+
+              <span className="rounded-full bg-blue-50 px-3 py-1 text-sm text-blue-700">
+                React
+              </span>
+
+              <span className="rounded-full bg-blue-50 px-3 py-1 text-sm text-blue-700">
+                Tailwind CSS
+              </span>
+            </div>
+          </article>
         </div>
-
-        <div className="bg-white rounded-lg shadow-lg p-6">
-          <h2 className="text-2xl font-semibold mb-4">
-            Portfolio Website
-          </h2>
-
-          <p className="mb-2">
-            <strong>Project Goal:</strong> Create a personal portfolio to showcase my projects, skills, and case studies.
-          </p>
-
-          <p className="mb-2">
-            <strong>My Role:</strong> Designed the layout and built the website using Next.js and Tailwind CSS.
-          </p>
-
-          <p className="mb-2">
-            <strong>What I Learned:</strong> File-based routing in Next.js, reusable components, and portfolio design.
-          </p>
-
-          <p>
-            <strong>Technologies:</strong> Next.js, Tailwind CSS
-          </p>
-        </div>
-
-        <div className="bg-white rounded-lg shadow-lg p-6">
-          <h2 className="text-2xl font-semibold mb-4">
-            Source-Grounded Study Notes Workflow
-          </h2>
-
-          <p className="mb-2">
-            <strong>Project Goal:</strong> Create accurate study notes from source documents using NotebookLM.
-          </p>
-
-          <p className="mb-2">
-            <strong>My Role:</strong> Organized source materials, generated structured notes, and documented the complete workflow.
-          </p>
-
-          <p className="mb-2">
-            <strong>What I Learned:</strong> AI-assisted note generation, organizing information, and creating reliable study resources.
-          </p>
-
-          <p>
-            <strong>Technologies:</strong> NotebookLM, AI-assisted learning
-          </p>
-        </div>
-
-      </div>
+      </section>
     </main>
   );
 }

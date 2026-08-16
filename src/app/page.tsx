@@ -264,11 +264,11 @@ export default function Home() {
               </h3>
 
               <ul className="mt-5 space-y-4 text-slate-400">
-                <li>→ Embedded Systems and Microcontrollers</li>
-                <li>→ IoT-based applications</li>
-                <li>→ VLSI and Digital Electronics</li>
-                <li>→ Python and software development</li>
-                <li>→ React, Next.js and modern web development</li>
+                <li><span aria-hidden="true">→ </span>Embedded Systems and Microcontrollers</li>
+                <li><span aria-hidden="true">→ </span>IoT-based applications</li>
+                <li><span aria-hidden="true">→ </span>VLSI and Digital Electronics</li>
+                <li><span aria-hidden="true">→ </span>Python and software development</li>
+                <li><span aria-hidden="true">→ </span>React, Next.js and modern web development</li>
               </ul>
             </div>
           </div>
@@ -329,7 +329,7 @@ export default function Home() {
                 className="group rounded-2xl border border-white/10 bg-white/5 p-6 transition duration-300 hover:-translate-y-2 hover:border-blue-400/40 hover:bg-white/[0.07]"
               >
                 <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-blue-500/10 text-xl text-blue-400">
-                  ◆
+                  <span aria-hidden="true">◆</span>
                 </div>
 
                 <h3 className="text-xl font-bold">
@@ -350,7 +350,7 @@ export default function Home() {
                   rel="noopener noreferrer"
                   className="mt-6 inline-block text-sm font-semibold text-white transition group-hover:text-blue-400"
                 >
-                  View Project →
+                  View Project <span aria-hidden="true">→</span>
                 </a>
               </article>
             ))}

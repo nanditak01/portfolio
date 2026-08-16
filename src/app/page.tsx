@@ -395,7 +395,7 @@ export default function Home() {
             </a>
 
             <a
-              href="https://www.linkedin.com/"
+              href="https://www.linkedin.com/in/nandita-kundanagar-a96a64331"
               target="_blank"
               rel="noopener noreferrer"
               className="rounded-xl border border-white/20 px-6 py-3 font-semibold transition hover:border-blue-400 hover:text-blue-400"

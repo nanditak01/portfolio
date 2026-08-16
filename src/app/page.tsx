@@ -90,6 +90,8 @@ export default function Home() {
             onClick={() => setMenuOpen(!menuOpen)}
             className="rounded-lg border border-white/20 px-3 py-2 md:hidden"
             aria-label="Toggle navigation menu"
+            aria-expanded={menuOpen}
+            aria-controls="mobile-nav"
           >
             ☰
           </button>
@@ -97,7 +99,10 @@ export default function Home() {
 
         {/* Mobile Navigation */}
         {menuOpen && (
-          <div className="border-t border-white/10 bg-slate-950 px-6 py-5 md:hidden">
+          <div
+            id="mobile-nav"
+            className="border-t border-white/10 bg-slate-950 px-6 py-5 md:hidden"
+          >
             <div className="flex flex-col gap-4">
               <a
                 href="#about"

@@ -111,7 +111,11 @@ export default function ChatPage() {
               setInput("");
             }}
           >
+            <label htmlFor="chat-input" className="sr-only">
+              Ask StudyMate AI
+            </label>
             <input
+              id="chat-input"
               value={input}
               onChange={(e) => setInput(e.target.value)}
               placeholder="Ask StudyMate AI..."

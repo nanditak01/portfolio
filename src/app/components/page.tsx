@@ -44,7 +44,11 @@ export default function ComponentsPage() {
               Clean form layouts with accessible input elements.
             </p>
 
+            <label htmlFor="example-input" className="sr-only">
+              Example input
+            </label>
             <input
+              id="example-input"
               type="text"
               placeholder="Example input"
               className="mt-5 w-full rounded-lg border px-4 py-3 outline-none focus:border-blue-500"

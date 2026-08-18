@@ -3,7 +3,7 @@
 import dynamic from "next/dynamic";
 
 const ProductScene = dynamic(
-  () => import("@/components/ProductScene"),
+  () => import("../components/ProductScene"),
   {
     ssr: false,
     loading: () => (
@@ -13,6 +13,7 @@ const ProductScene = dynamic(
       >
         <div className="text-center">
           <div className="mx-auto mb-4 h-10 w-10 animate-spin rounded-full border-4 border-slate-700 border-t-white" />
+
           <p className="text-sm text-slate-400">
             Loading 3D product...
           </p>

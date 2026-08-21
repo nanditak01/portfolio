@@ -16,16 +16,18 @@ export async function POST(req: Request) {
 
     return result.toUIMessageStreamResponse();
   } catch (error) {
-    console.error("CHAT ERROR:", error);
+    console.error("AI ERROR:", error);
 
-    return Response.json(
+    return new Response(
+      JSON.stringify({
+        error: "AI request failed",
+      }),
       {
-        error:
-          error instanceof Error
-            ? error.message
-            : "Something went wrong",
-      },
-      { status: 500 }
+        status: 500,
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
     );
   }
 }

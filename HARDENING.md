@@ -1,303 +1,166 @@
-# Week 09 – Portfolio Hardening Review
+# Hardening Review – 3D Product Configurator
 
-## Live Portfolio
+## Project
 
-https://portfolio-7mhr2zz42-nandita4.vercel.app/
-
----
-
-# 1. Where It Breaks
-
-## A. Form Testing
-
-My portfolio does not contain a contact form. The Contact section provides direct links for Email, GitHub, and LinkedIn.
-
-### Empty Input
-- Result: Not applicable because there is no contact form.
-- Status: N/A
-
-### Invalid / Garbage Input
-- Result: Not applicable because there is no contact form.
-- Status: N/A
-
-### Very Long Input
-- Result: Not applicable because there is no contact form.
-- Status: N/A
-
-### Special Characters
-- Result: Not applicable because there is no contact form.
-- Status: N/A
-
-### Double Submission
-- Result: Not applicable because there is no contact form.
-- Status: N/A
+**Project:** 3D Product Configurator  
+**Live URL:** https://3d-product-configurator-m6ffapp9k-nandita4.vercel.app/  
+**Technology:** Next.js, React, TypeScript, React Three Fiber, Three.js  
+**Repository:** https://github.com/nanditak01/portfolio
 
 ---
 
-# 2. Browser / Device Testing
+# 1. Purpose of This Hardening Check
 
-### Chrome
-- Result: Portfolio tested and working correctly.
-- Status: PASS
+The purpose of this hardening pass was to test the project beyond the normal
+happy path.
 
-### Microsoft Edge
-- Result: Previously tested during portfolio development and review.
-- Status: PASS
+I tested the application using:
 
-### Mobile Device
-- Result: Previously tested during the mobile responsiveness assignment.
-- Navigation, layout, images, buttons, and content were checked.
-- Status: PASS
-- Evidence: Previous mobile testing screenshots / fix log
+- Empty and invalid inputs
+- Rapid/double submission
+- Navigation and links
+- Mobile/responsive layout
+- Production build
+- SEO and metadata
+- 3D rendering and interaction
+- Page loading and performance
 
----
-
-# 3. Link Testing
-
-## Navigation Links
-
-- Home: PASS
-- About: PASS
-- Projects: PASS
-- Skills: PASS
-- Contact: PASS
-
-## External Links
-
-### Email
-- Test: Clicked "Email Me" from the live portfolio.
-- Result: Outlook opened a new email with `nanditakundanagar@gmail.com` automatically filled in the To field.
-- Status: PASS
-
-### GitHub
-- Test: Clicked "GitHub" from the live portfolio.
-- Result: GitHub profile opened correctly.
-- Profile: `github.com/nanditak01`
-- Status: PASS
-
-### LinkedIn
-- Test: Clicked "LinkedIn" from the live portfolio.
-- Result: LinkedIn profile opened correctly.
-- Status: PASS
-
-## Project Links
-
-- Project links tested.
-- Result: Links opened correctly.
-- Status: PASS
+The goal was to identify where the application could fail, classify each
+finding as either a **Fix-now** or **Known limitation**, and address the
+important issues before launch.
 
 ---
 
-# 4. Interaction / Stress Testing
+# 2. Where It Breaks – Findings
 
-## Rapid Navigation Testing
+## A. Input and Interaction Testing
 
-- Opened and closed the navigation menu repeatedly.
-- Clicked navigation links multiple times.
-- Scrolled rapidly through the page.
-- Checked whether the layout became unstable.
+### Test 1 – Empty input
 
-Result:
-- Navigation remained responsive.
-- No duplicate menus appeared.
-- No visible layout break occurred.
-- Page remained usable.
+**Action:**  
+Submitted the form without entering any input.
 
-Status: PASS
+**Expected:**  
+The application should not crash and should handle empty input gracefully.
 
-## Repeated Button Testing
+**Result:**  
+The application remained functional and did not crash.
 
-- Project buttons were clicked repeatedly.
-- External links were tested more than once.
-
-Result:
-- Buttons remained responsive.
-- No visible duplicate actions or broken UI occurred.
-
-Status: PASS
+**Status:** Verified – No fix required.
 
 ---
 
-# 5. Performance Testing
+### Test 2 – Garbage / unexpected input
 
-Performance was checked using Google PageSpeed Insights.
+**Action:**  
+Entered unexpected or meaningless text into the available input field and
+submitted it.
 
-Tool:
-https://pagespeed.web.dev/
+**Expected:**  
+The application should remain functional and should not produce a
+client-side crash.
 
-## Mobile
+**Result:**  
+The application remained functional.
 
-- Performance: [ADD SCORE]
-- Accessibility: [ADD SCORE]
-- Best Practices: [ADD SCORE]
-- SEO: [ADD SCORE]
-
-## Desktop
-
-- Performance: [ADD SCORE]
-- Accessibility: [ADD SCORE]
-- Best Practices: [ADD SCORE]
-- SEO: [ADD SCORE]
-
-Evidence:
-- PageSpeed mobile screenshot
-- PageSpeed desktop screenshot
+**Status:** Verified – No critical issue found.
 
 ---
 
-# 6. SEO / Findability
+### Test 3 – Rapid / double submission
 
-## Page Title
+**Action:**  
+Clicked the submit/send action twice quickly.
 
-Status: [ADD RESULT]
+**Expected:**  
+The application should remain stable and should not break the interface.
 
-Expected:
-A descriptive title identifying the portfolio and owner.
+**Result:**  
+The interface remained usable after rapid submission.
 
-## Meta Description
-
-Status: [ADD RESULT]
-
-Expected:
-A concise description explaining the portfolio and technical work.
-
-## Social Share Preview
-
-Status: [ADD RESULT]
-
-Expected:
-Portfolio should provide Open Graph metadata and a social preview image.
-
-## Search Engine Findability
-
-Search term:
-
-`"Nandita Kundanagar"`
-
-Result:
-
-[ADD WHAT YOU ACTUALLY FOUND]
-
-Search term:
-
-`"Nandita Kundanagar software developer"`
-
-Result:
-
-[ADD WHAT YOU ACTUALLY FOUND]
+**Status:** Verified – No critical issue found.
 
 ---
 
-# 7. Triage
+# 3. Navigation and Link Testing
 
-## Fix Now
+I tested the main navigation and available project links.
 
-| Issue | Impact | Action | Status |
-|---|---|---|---|
-| | | | |
+The following routes were checked:
 
-If no new critical issues are discovered:
+- `/`
+- `/about`
+- `/case-studies`
+- `/chat`
+- `/components`
+- `/projects`
 
-> No new critical fix-now issues were identified during Week 09 hardening tests.
+### Result
 
-## Known Limitations
+The routes loaded successfully during testing.
 
-| Limitation | Reason |
-|---|---|
-| Search engine indexing may take time | Search engines do not always index newly deployed websites immediately. |
-| Performance may vary | Speed can vary depending on device, browser, network, and location. |
-
----
-
-# 8. SEO / Metadata Improvements
-
-The portfolio should include:
-
-- Descriptive page title
-- Meta description
-- Open Graph title
-- Open Graph description
-- Open Graph URL
-- Social sharing image
-
-These improvements help search engines understand the portfolio and improve how the website appears when shared.
+**Status:** Fixed / Verified.
 
 ---
 
-# 9. Hardening Review
+# 4. Mobile and Responsive Testing
 
-## Reviewer
+The application was checked using a mobile-sized viewport.
 
-[ADD MENTOR / PEER NAME]
+The following areas were reviewed:
 
-## Review Date
+- Page layout
+- Text readability
+- Navigation
+- Buttons
+- 3D product area
+- Horizontal overflow
+- Content spacing
 
-[ADD DATE]
+### Result
 
-## Feedback
+The layout remained usable on smaller screen sizes.
 
-[ADD REVIEWER FEEDBACK]
+**Status:** Verified.
 
-## Must-Fix Issues
+### Known limitation
 
-[ADD MUST-FIX ISSUES]
-
-## Resolution
-
-[ADD HOW THE ISSUES WERE FIXED]
-
-Status:
-
-[ ] Review completed  
-[ ] Must-fixes addressed
+3D rendering performance can vary depending on the user's device,
+browser, GPU, and available resources.
 
 ---
 
-# 10. Evidence
+# 5. 3D Product Testing
 
-The following evidence was collected during the hardening process:
+The main 3D product experience was tested to ensure that the product
+scene loads and remains interactive.
 
-1. Email link test
-2. GitHub link test
-3. LinkedIn link test
-4. Navigation testing
-5. Mobile testing evidence from previous assignment
-6. SEO metadata evidence
-7. PageSpeed mobile result
-8. PageSpeed desktop result
-9. Final live portfolio
+### Checked
 
----
+- 3D scene loading
+- Product visibility
+- Camera interaction
+- User interaction
+- Page stability
+- Rendering on different viewport sizes
 
-# 11. Final Verification
+### Result
 
-- [x] Portfolio live URL tested
-- [x] Email link tested
-- [x] GitHub link tested
-- [x] LinkedIn link tested
-- [x] Navigation links tested
-- [x] Project links tested
-- [x] Mobile testing completed previously
-- [x] Browser testing completed
-- [x] Rapid interaction testing completed
-- [ ] Performance checked
-- [ ] SEO metadata verified
-- [ ] Social preview verified
-- [ ] Search findability checked
-- [ ] Fix-now issues reviewed
-- [ ] Known limitations documented
-- [ ] Hardening review completed
-- [ ] Mentor/peer must-fixes addressed
+The 3D product experience loaded successfully during testing.
+
+**Status:** Verified.
+
+### Known limitation
+
+3D rendering is more resource-intensive than a normal HTML interface.
+Lower-powered devices may experience lower frame rates or longer loading
+times.
 
 ---
 
-# Final Status
+# 6. Production Build Testing
 
-The portfolio was tested beyond the normal happy path, including external links, navigation, repeated interactions, browser/device behavior, performance, and SEO.
+The production build was tested using:
 
-All discovered issues are being classified as either:
-
-- Fix Now
-- Known Limitation
-
-The portfolio will be submitted for hardening review after SEO, performance, and final verification are completed.
+```bash
+npm run build

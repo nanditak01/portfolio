@@ -1,23 +1,13 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL(
-    "https://3d-product-configurator-m6ffapp9k-nandita4.vercel.app"
-  ),
-  title: "3D Product Configurator",
-  description: "Interactive 3D product experience",
-  openGraph: {
-    title: "3D Product Configurator",
-    description: "Interactive 3D product experience",
-    url: "https://3d-product-configurator-m6ffapp9k-nandita4.vercel.app",
-    siteName: "3D Product Configurator",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "3D Product Configurator",
-    description: "Interactive 3D product experience",
+  title: "Nandita Kumari | Software Developer Portfolio",
+  description:
+    "Nandita Kumari's professional portfolio showcasing software development projects, technical skills, and experience.",
+  icons: {
+    icon: "/favicon.ico",
   },
 };
 
@@ -28,7 +18,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        {children}
+        <Analytics />
+      </body>
     </html>
   );
 }

@@ -3,12 +3,9 @@ import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Nandita Kumari | Software Developer Portfolio",
+  title: "Nandita Kundanagar | Software Developer Portfolio",
   description:
-    "Nandita Kumari's professional portfolio showcasing software development projects, technical skills, and experience.",
-  icons: {
-    icon: "/favicon.ico",
-  },
+    "Portfolio of Nandita Kundanagar showcasing software development projects, technical skills, and experience.",
 };
 
 export default function RootLayout({
